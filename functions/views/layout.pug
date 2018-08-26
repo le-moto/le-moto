@@ -1,6 +1,55 @@
-//- investment-contract.pug
+//- layout.pug
 
-html
-    body
-        h1 Hello World!
-        p Nothing to see here.
+html(lang='en')  
+html 
+  head 
+    title Le Moto Haiti
+    meta(charset='utf=9' lang='en')
+    meta(name='description' content='Le Moto Haiti: Microfinancing Haiti')
+    meta(name='viewport' content='width=device-width', 'initial-scale=1.0')
+    link(rel='stylesheet' 'public/css/styles.css')
+    link(rel='stylesheet' 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet')
+
+
+  body
+    .header
+      .logo
+        h1 Le Moto Haiti 
+      .links  
+        .about
+          a(href="/about") Georgetons Story
+        .contract
+          a(href="/investing-contract") Investing Contract
+
+      block contents 
+
+    .footer
+      .left
+        ul 
+          li 
+            a(href="/terms-of-use") Terms of Use
+          li
+           a(href="/Privacy-Policy") Privacy Policy
+          li
+            p Copyright Le MOTO Haiti 2018
+          
+      .middle
+        p The current foreight aid system doesn't work.
+        p Let's try something new, invest in the future of Haiti.
+
+      .right
+        ul 
+          li 
+            span
+              i 
+              p email
+          li
+            span
+              i 
+              p Facebook
+          li 
+            span
+              i
+              p Instagram
+              

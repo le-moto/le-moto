@@ -10,9 +10,10 @@
     "logs": "firebase functions:log"
   },
   "dependencies": {
+    "@google-cloud/functions-emulator": "^1.0.0-beta.5",
     "consolidate": "^0.15.1",
     "express": "^4.16.3",
-    "firebase-admin": "~5.11.0",
+    "firebase-admin": "^5.12.1",
     "firebase-functions": "^1.0.0",
     "pug": "^2.0.3"
   },
