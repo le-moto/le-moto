@@ -11,6 +11,9 @@ html
     link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet')
     link(href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,600" rel="stylesheet")
 
+  style
+    include ../../public/css/styles.css
+    
   body
     .header
       .wrapper
@@ -18,38 +21,39 @@ html
           p Le Moto Haiti 
         .links  
           .about
-            a(href="/about") Georgetons Story
+            a(href="/georgetons-story") Georgetons Story
           .contract
             a(href="/investing-contract") Investing Contract
 
     block contents 
 
     .footer
-      .left
-        ul 
-          li 
-            a(href="/terms-of-use") Terms of Use
-          li
-           a(href="/Privacy-Policy") Privacy Policy
-          li
-            p Copyright Le MOTO Haiti 2018
-          
-      .middle
-        p The current foreight aid system doesn't work.
-        p Let's try something new, invest in the future of Haiti.
+      .wrapper 
+        .left
+          ul 
+            li 
+              a(href="/terms-of-use") Terms of Use
+            li
+              a(href="/Privacy-Policy") Privacy Policy
+            li
+              p Copyright Le MOTO Haiti 2018
+            
+        .middle
+          p The current foreight aid system doesn't work.
+          p Let's try something new, invest in the future of Haiti.
 
-      .right
-        ul 
-          li 
-            span
-              i 
-              p email
-          li
-            span
-              i 
-              p Facebook
-          li 
-            span
-              i
-              p Instagram
+        .right
+          ul 
+            li 
+              span
+                i 
+                p email
+            li
+              span
+                i 
+                p Facebook
+            li 
+              span
+                i
+                p Instagram
               

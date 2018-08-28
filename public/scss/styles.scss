@@ -10,8 +10,19 @@ html, body {
     height: 100%;
     background-color: $light;
     font-family: $ibm-plex;
+    overflow-x: hidden; // hide horizontal
+
 }
 
+body {
+    margin: 0px;
+}
+
+.page {
+    width: 100%;
+    max-width: 800px;
+    margin: 64px auto;
+}
 h1 {
     font-size: 32px;
     font-weight: 200;
@@ -19,12 +30,15 @@ h1 {
 }
 
 h2 {
-
+    color: $light;
+    font-weight: 500;
+    font-size: 22px;
 }
 
 h3 {
 
 }
+
 
 .video {
     margin: auto;
@@ -35,6 +49,7 @@ h3 {
         height: auto;
     }
 }
+
 .header {
     background-color: $grey;
     width: 100%;
@@ -49,7 +64,7 @@ h3 {
             p {
                 color: $peach;
                 font-size: 64px;
-                font-weight: 200;
+                font-weight: 100;
                 padding: 16px;
                 line-height: 8px;
             }
@@ -81,16 +96,91 @@ h3 {
     height: 56;
     min-width: 200px;
     max-width: 400px;
+    margin:auto;
 
     h2 {
         color: $light;
         font-size: 24px;
-        font-weight: 400;
-        line-height: 56;
+        font-weight: 500;
+        line-height: 56px;
+        text-align: center;
     }
 }
 
 .left-bar{
+    max-width: 800px;
+    width: 600px;
     background-color: $peach;
-    margin-left: 0px
+    display: inline-block;
+    position: relative;
+    margin: 16px 0px 0px 0px;
+    height: 50px;
+
+}
+
+.left-bar:before{
+    content:"";
+    background-color: $peach;
+    position: absolute;
+    height: 50px;;
+    width: 2000px;
+    left: -2000px;
+    z-index: -0;
+}
+
+
+.footer {
+    height:168px;
+    width: 100%;
+    background-color: $grey;
+    .wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        .left {
+            display: inline-block;
+            width: 25%;
+            ul {
+                list-style-type: none;
+                li {
+                    padding: 8px;
+                    a {
+                        line-height: 8px;
+                        color: $light;
+                        text-decoration: none;
+                        margin: 2px;
+        
+                    }
+                    p {
+                        line-height: 8px;
+                        color: $light;
+                        margin: 2px;
+                    }
+                }
+            }
+
+        }
+        .middle {
+            display: inline-block;
+            width: 50%;
+            p {
+                color: $light;
+                text-align: center;
+            }
+        }
+        .right{
+            width: 25%;
+            display: inline-block;
+            ul {
+                list-style-type: none;
+                li {
+                    color: $light;
+                    a {
+
+                    }
+                }
+            }
+        }
+
+    }
 }
