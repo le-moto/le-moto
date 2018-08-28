@@ -7,22 +7,22 @@ html
     meta(charset='utf=9' lang='en')
     meta(name='description' content='Le Moto Haiti: Microfinancing Haiti')
     meta(name='viewport' content='width=device-width', 'initial-scale=1.0')
-    link(rel='stylesheet' 'public/css/styles.css')
     link(rel='stylesheet' 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab')
     link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet')
-
+    link(href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,600" rel="stylesheet")
 
   body
     .header
-      .logo
-        h1 Le Moto Haiti 
-      .links  
-        .about
-          a(href="/about") Georgetons Story
-        .contract
-          a(href="/investing-contract") Investing Contract
+      .wrapper
+        .logo
+          p Le Moto Haiti 
+        .links  
+          .about
+            a(href="/about") Georgetons Story
+          .contract
+            a(href="/investing-contract") Investing Contract
 
-      block contents 
+    block contents 
 
     .footer
       .left

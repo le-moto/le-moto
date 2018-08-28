@@ -4,30 +4,31 @@ extends layout.pug
 
 block contents 
   style
-    include public/css/styles.css
+    include ../../public/css/styles.css
 
-    h1 Mico-financing transportation in Haiti
+  h1 Mico-financing transportation in Haiti
 
-    .video
-      video(src="")
+  .video
+    video(width="320" height="240" controls)
+      source(src="../../video/story.mp4")
 
-    .left-bar
-      h2 Invest $1000 today, receive $1100 in a year.
-    
-    .paragraph
-      p Le MOTO is a small business based in Leogane, Haiti.
-      | The business model is straightforward and sustainable,
-      | lease’s motorcycles to moto-taxi drivers. 
+  .left-bar
+    h2 Invest $1000 today, receive $1100 in a year.
+  
+  .paragraph
+    p Le MOTO is a small business based in Leogane, Haiti.
+    | The business model is straightforward and sustainable,
+    | lease’s motorcycles to moto-taxi drivers. 
 
-    .paragraph 
-      p Our driver pay $5 a day to lease their motorcycle,
-      | the main form of transportation in Haiti. Leasing
-      | these motorcycles allows them to get around, provide
-      | a service, and self employ. After X payments of X,
-      | a total of X, the driver becomes the owner. With
-      | their lease payments we are able to purchase more
-      | motorcycles enabling more Haitians towards self-employment
-      | and easy transportation!
+  .paragraph 
+    p Our driver pay $5 a day to lease their motorcycle,
+    | the main form of transportation in Haiti. Leasing
+    | these motorcycles allows them to get around, provide
+    | a service, and self employ. After X payments of X,
+    | a total of X, the driver becomes the owner. With
+    | their lease payments we are able to purchase more
+    | motorcycles enabling more Haitians towards self-employment
+    | and easy transportation!
 
-    .button
-      h2 Invest Today! 
+  .button
+    h2 Invest Today! 

@@ -32,3 +32,17 @@ From the main directory run
 
 From the functions directory run
     $ npm install 
+
+
+## Running the server 
+This function will differ depending on setup.  Running from a virtual machine will require the user to enter the ip address the server should be accesible on.  Below is an example of how to declare the host ip. 
+
+        $ firebase serve --host 10.0.0.251 
+
+## Rendering css
+
+        $ ./node_modules/node-sass/bin/node-sass  public/scss/styles.scss public/css/
+
+        or
+
+        $ make sass 
