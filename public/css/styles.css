@@ -6,12 +6,52 @@ html, body {
   overflow-x: hidden; }
 
 body {
-  margin: 0px; }
+  margin: 0px;
+  height: auto; }
+
+.breadcrumbs a {
+  display: inline-block;
+  padding: 4px;
+  color: #2B2D32; }
+
+.breadcrumbs p {
+  display: inline-block;
+  padding: 4px;
+  color: #2B2D32; }
 
 .page {
   width: 100%;
   max-width: 800px;
-  margin: 64px auto; }
+  margin: 16px auto;
+  height: auto; }
+  .page .wrapper {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    display: block; }
+
+.top {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto; }
+
+.paragraph-wrapper {
+  width: 100%;
+  max-width: 800;
+  position: relative;
+  clear: both; }
+
+.paragraph-right {
+  width: 600px;
+  margin: 16px 0px;
+  display: block;
+  right: 0;
+  float: right; }
+
+.paragraph {
+  width: 600px;
+  margin: 32px 0px;
+  display: block; }
 
 h1 {
   font-size: 32px;
@@ -31,35 +71,58 @@ h2 {
     width: 100%;
     height: auto; }
 
+img {
+  width: 100%;
+  display: block;
+  max-width: 800px; }
+
 .header {
   background-color: #707682;
   width: 100%;
-  height: 168px; }
+  height: 120px; }
   .header .wrapper {
     max-width: 1200px;
-    margin: auto; }
+    margin: auto;
+    height: 100%;
+    padding: 0px 32px; }
     .header .wrapper .logo {
       display: inline-block;
-      width: 50%; }
+      width: 50%;
+      height: 100%; }
+      .header .wrapper .logo a {
+        text-decoration: none; }
       .header .wrapper .logo p {
         color: #C99288;
-        font-size: 64px;
+        font-size: 48px;
         font-weight: 100;
-        padding: 16px;
-        line-height: 8px; }
+        padding: 16px 0px;
+        line-height: 0px; }
     .header .wrapper .links {
       display: inline-block;
-      width: 50%; }
+      width: 50%;
+      text-align: right; }
       .header .wrapper .links .about, .header .wrapper .links .contract {
         width: 50%;
-        display: inline-block; }
+        display: inline-block;
+        float: right; }
         .header .wrapper .links .about a, .header .wrapper .links .contract a {
+          text-align: right !important;
           text-decoration: none;
           color: #EBE8E5;
           font-weight: 500; }
+        .header .wrapper .links .about a:hover, .header .wrapper .links .contract a:hover {
+          color: #C99288; }
+        .header .wrapper .links .about a:active, .header .wrapper .links .contract a:active {
+          color: #74484E; }
       .header .wrapper .links h2 {
         color: #EBE8E5;
         font-size: 24px; }
+
+.button-wrapper {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  float: left; }
 
 .button {
   background-color: #74484E;
@@ -67,13 +130,18 @@ h2 {
   height: 56;
   min-width: 200px;
   max-width: 400px;
-  margin: auto; }
-  .button h2 {
-    color: #EBE8E5;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 56px;
-    text-align: center; }
+  margin: 32px auto; }
+  .button a {
+    text-decoration: none; }
+    .button a h2 {
+      color: #EBE8E5;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 56px;
+      text-align: center; }
+
+.two-dp {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .left-bar {
   max-width: 800px;
@@ -81,8 +149,10 @@ h2 {
   background-color: #C99288;
   display: inline-block;
   position: relative;
-  margin: 16px 0px 0px 0px;
+  margin: 32px 0px 0px 0px;
   height: 50px; }
+  .left-bar h2 {
+    line-height: 16px; }
 
 .left-bar:before {
   content: "";
@@ -93,14 +163,43 @@ h2 {
   left: -2000px;
   z-index: -0; }
 
-.footer {
-  height: 168px;
+.right-bar-wrapper {
   width: 100%;
-  background-color: #707682; }
+  height: 50px;
+  margin-top: 32px; }
+
+.right-bar {
+  max-width: 800px;
+  width: 600px;
+  background-color: #C99288;
+  display: block;
+  position: relative;
+  height: 50px;
+  float: right; }
+  .right-bar h2 {
+    line-height: 16px;
+    padding-left: 16px; }
+
+.right-bar:before {
+  content: "";
+  background-color: #C99288;
+  position: absolute;
+  height: 50px;
+  width: 2000px;
+  right: -2000px;
+  z-index: -0; }
+
+.footer {
+  height: 180px;
+  width: 100%;
+  background-color: #707682;
+  clear: both;
+  display: block; }
   .footer .wrapper {
     width: 100%;
     max-width: 1200px;
-    margin: auto; }
+    margin: auto;
+    display: flow-root; }
     .footer .wrapper .left {
       display: inline-block;
       width: 25%; }
@@ -113,13 +212,20 @@ h2 {
             color: #EBE8E5;
             text-decoration: none;
             margin: 2px; }
+          .footer .wrapper .left ul li a:hover {
+            color: #C99288; }
+          .footer .wrapper .left ul li a:active {
+            color: #74484E; }
           .footer .wrapper .left ul li p {
             line-height: 8px;
             color: #EBE8E5;
             margin: 2px; }
     .footer .wrapper .middle {
       display: inline-block;
-      width: 50%; }
+      width: 50%;
+      vertical-align: text-bottom; }
+      .footer .wrapper .middle h2 {
+        text-align: center; }
       .footer .wrapper .middle p {
         color: #EBE8E5;
         text-align: center; }
@@ -127,6 +233,96 @@ h2 {
       width: 25%;
       display: inline-block; }
       .footer .wrapper .right ul {
-        list-style-type: none; }
+        list-style-type: none;
+        padding: 8px 0px; }
         .footer .wrapper .right ul li {
-          color: #EBE8E5; }
+          color: #EBE8E5;
+          padding: 8px; }
+          .footer .wrapper .right ul li a {
+            line-height: 8px;
+            color: #EBE8E5;
+            text-decoration: none;
+            margin: 2px; }
+          .footer .wrapper .right ul li i {
+            margin-right: 8px; }
+          .footer .wrapper .right ul li a:hover {
+            color: #C99288; }
+          .footer .wrapper .right ul li a:active {
+            color: #74484E; }
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    height: auto; }
+    .footer .wrapper {
+      vertical-align: middle;
+      display: flow-root;
+      padding: 0px 16px; }
+      .footer .wrapper .left, .footer .wrapper .middle, .footer .wrapper .right {
+        width: 100% !important;
+        display: block;
+        text-align: center; }
+        .footer .wrapper .left ul, .footer .wrapper .middle ul, .footer .wrapper .right ul {
+          padding: 8px 0px; }
+  .top {
+    margin: 0px 24px; }
+  .left-bar {
+    width: 100%;
+    height: 50px; }
+    .left-bar h2 {
+      line-height: 16px;
+      margin-left: 24px; }
+  .right-bar {
+    width: 100%;
+    height: 50px; }
+    .right-bar h2 {
+      line-height: 16px;
+      margin-right: 24px; } }
+
+@media only screen and (max-width: 800px) {
+  .paragraph {
+    margin-left: 24px !important; }
+  .paragraph-right {
+    margin-right: 24px !important; }
+  .footer .wrapper {
+    padding: 0px; }
+  .header .wrapper {
+    padding: 0px 8px; }
+    .header .wrapper .logo {
+      height: auto !important;
+      vertical-align: text-bottom; }
+      .header .wrapper .logo a p {
+        padding: 0px; }
+    .header .wrapper .links .about, .header .wrapper .links .contract {
+      display: block;
+      width: 100%;
+      margin: 8px 0px; } }
+
+@media only screen and (min-width: 1px) and (max-width: 600px) {
+  .paragraph {
+    margin: 0px !important;
+    width: auto !important;
+    padding: 0px 12px !important; }
+  .paragraph-right {
+    margin: 0px !important;
+    width: auto !important;
+    padding: 0px 12px !important; }
+  .left-bar h2 {
+    margin-left: 12px; }
+  .header {
+    height: 180px; }
+    .header .wrapper {
+      position: absolute;
+      width: 100%;
+      height: auto; }
+      .header .wrapper .logo {
+        display: block;
+        width: 100%; }
+        .header .wrapper .logo a {
+          text-align: center; }
+      .header .wrapper .links {
+        display: block;
+        width: 100%; }
+        .header .wrapper .links .about, .header .wrapper .links .contract {
+          text-align: center; }
+        .header .wrapper .links a {
+          text-align: center; } }

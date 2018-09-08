@@ -2,63 +2,77 @@
 
 extends layout.pug
 
-block contents 
-  .breadcrumbs
-    span
-      p a(href="/") Home
-      p a(href="/Georgetons Story")
+block contents  
+  .top
+    .breadcrumbs
+      span
+        a(href="/") Home
+        p >
+        a(href="/Georgetons Story") Georgeton's Story
 
-  h2 About Georgeton Charles
-  img(src="" titl="Georgeton of Le Moto Riding a Motorcycle") 
- 
-  .left-bar
-    h3 Volunteering with Heart of Heart International
-
-  p Georgeton Charles is a graduate of Wilmington University of
-    | Delaware with a Master of Business: Organizational Leadership degree.
-    | Born and raised in Leogane, Haiti, he came to the United States after
-    | serving as an interpreter for Heart to Heart International, a
-    | volunteer team of medical professionals who assisted victims of the
-    | 2010 earthquake in Haiti. Two of the nurses whom he assisted
-    | offered Georgeton an opportunity to come to the US to pursue a college
-    | education which he began at Cumberland County College.
-
-  img(src="" title="Le Moto Auto Parts")
-    
-  .right-bar 
-    h3 Founding Another Haiti to help Haitian students succeed
+  .page
+    h1 About Georgeton Charles
+    img(src="https://firebasestorage.googleapis.com/v0/b/le-moto.appspot.com/o/le-moto-1.jpg?alt=media&token=aa6ae353-55b4-486b-8319-cc25687edf52") 
   
-  P Georgeton’s passion for education has led him to establish a locally-based
-  | nonprofit organization to help children in Haiti afford tuition, books, and
-  | uniforms required for public education. The organization “Another Haiti”
-  | conducts fundraising locally and each August, the team of local volunteers
-  | whom Georgeton has recruited travels to Leogane to work with the students
-  | and to conduct an art/essay contest in which around 200 students compete
-  | for scholarships
+    .left-bar
+      h2 Volunteering with Heart of Heart International
 
-  img(src="" title="Another photo")
+    .paragraph
 
-  .left-bar
-    h3 Running a tailor shop 
+      p Georgeton Charles is a graduate of Wilmington University of
+        | Delaware with a Master of Business: Organizational Leadership degree.
+        | Born and raised in Leogane, Haiti, he came to the United States after
+        | serving as an interpreter for Heart to Heart International, a
+        | volunteer team of medical professionals who assisted victims of the
+        | 2010 earthquake in Haiti. Two of the nurses whom he assisted
+        | offered Georgeton an opportunity to come to the US to pursue a college
+        | education which he began at Cumberland County College.
 
-  P Georgeton himself experienced the hardship of having to sit out a year
-    | of high school so that his older brother could attend. He used that year
-    | as an opportunity to apprentice as a tailor and learned a very valuable
-    | trade. The following year he went back to school and earned his diploma.
-    | He has since founded, built, and after the 2010 earthquake in Haiti,
-    | rebuilt a successful tailoring business in his home town that employs
-    | five people.
-  
-  img(src="" title="Another photo")
-
-  .right-bar
-    h3 Continueing to support Haiti 
-
+    img(src="https://firebasestorage.googleapis.com/v0/b/le-moto.appspot.com/o/le-moto-11.jpg?alt=media&token=1556acc8-a5f4-4f8c-82b4-cf89eef90742" title="Le Moto Auto Parts")
+      
+    .right-bar-wrapper  
+      .right-bar 
+        h2 Supporting students in Haiti
     
-  P Georgeton believes that Haiti won’t be going anywhere without being
-  | self-sustainable. Haiti, his home country depends on the mercy of other
-  | countries since almost the beginning of times. He created “Le Moto” a
-  | small leasing motorcycle to help tackle this issues.  “Le Moto” is
-  | currently employs 27 people and ready to grow.
+    .paragraph-right
+      P Georgeton’s passion for education has led him to establish a locally-based 
+        | nonprofit organization to help children in Haiti afford tuition, books, and
+        | uniforms required for public education. The organization “Another Haiti”
+        | conducts fundraising locally and each August, the team of local volunteers
+        | whom Georgeton has recruited travels to Leogane to work with the students
+        | and to conduct an art/essay contest in which around 200 students compete
+        | for scholarships
+    .img 
+      img(src="https://firebasestorage.googleapis.com/v0/b/le-moto.appspot.com/o/le-moto-16.jpg?alt=media&token=ce62d929-cf6f-46ef-956c-27a2b1a09d96" title="Another photo")
 
-  P Helping his people in Haiti, however, will always be his highest calling in life.
+    .left-bar
+      h2 Valuable employer 
+
+    .paragraph
+      P Georgeton himself experienced the hardship of having to sit out a year
+        | of high school so that his older brother could attend. He used that year
+        | as an opportunity to apprentice as a tailor and learned a very valuable
+        | trade. The following year he went back to school and earned his diploma.
+        | He has since founded, built, and after the 2010 earthquake in Haiti,
+        | rebuilt a successful tailoring business in his home town that employs
+        | five people.
+    
+    img(src="https://firebasestorage.googleapis.com/v0/b/le-moto.appspot.com/o/le-moto-19.jpg?alt=media&token=db29ead2-f10a-4bf8-8280-a84384eba496" title="Another photo")
+    
+    .right-bar-wrapper
+      .right-bar
+        h2 Continuing to support Haiti 
+
+    .paragraph-right
+      P Georgeton believes that Haiti won’t be going anywhere without being
+        | self-sustainable. Haiti, his home country depends on the mercy of other
+        | countries since almost the beginning of times. He created “Le Moto” a
+        | small leasing motorcycle to help tackle this issues.  “Le Moto” is
+        | currently employs 27 people and ready to grow.
+
+      P Helping his people in Haiti, however, will always be his highest calling in life.
+
+    .button-wrapper
+      .button(class="two-dp")
+        a(href="/investment-contract") 
+          h2 Invest Today! 

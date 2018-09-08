@@ -2,20 +2,24 @@
 
 extends layout.pug
 
-block contents 
+block contents  
   
-  .breadcrumbs
-    span
-      a(href="/") Home
-      a(href="/Investment-contract") Investment Contract 
+  .top
+    .breadcrumbs
+      span
+        a(href="/") Home
+        p > 
+        a(href="/Investment-contract") Investment Contract 
 
-  h2 Investing Contract 
-  
-  p Starts here... 
-  
-  .print
-    span
-      i
-      p print
-  .button
-    h3 Invest Today
+  .page
+    h1 Investing Contract 
+    
+    p Starts here... 
+    
+    .print
+      span
+        i
+        p print
+    .button
+      a(href="/investment-contract")
+        h2 Invest Today

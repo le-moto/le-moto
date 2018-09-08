@@ -7,7 +7,7 @@ html
     meta(charset='utf=9' lang='en')
     meta(name='description' content='Le Moto Haiti: Microfinancing Haiti')
     meta(name='viewport' content='width=device-width', 'initial-scale=1.0')
-    link(rel='stylesheet' href='https://le-moto.firebaseapp.com/css/styles.css')
+    link(rel='stylesheet' href='/css/styles.css')  
     link(rel='stylesheet' 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab')
     link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet')
     link(href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,600" rel="stylesheet")
@@ -16,12 +16,13 @@ html
     .header
       .wrapper
         .logo
-          p Le Moto Haiti 
+          a(href="/") 
+            p Le Moto Haiti 
         .links  
-          .about
+          .about 
             a(href="/georgetons-story") Georgetons Story
           .contract
-            a(href="/investing-contract") Investing Contract
+            a(href="/investment-contract") Investment Contract
 
     block contents 
 
@@ -37,21 +38,25 @@ html
               p Copyright Le MOTO Haiti 2018
             
         .middle
-          p The current foreight aid system doesn't work.
-          p Let's try something new, invest in the future of Haiti.
+          h2
+            |
+            i The current foreign aid system doesn't work.
+          h2
+            |
+            i Let's try something new, invest in the future of Haiti.
 
         .right
           ul 
             li 
               span
-                i 
-                p email
+                i.fa.fa-envelope
+                a(href="mailto:lemotohaiti@gmail.com") email
             li
               span
-                i 
-                p Facebook
+                i.fa.fa-facebook
+                a(href="www.facebook.com/lemotohaiti") Facebook
             li 
               span
-                i
-                p Instagram
+                i.fa.fa-instagram
+                a(href="www.instagram.com/lemotohait") Instagram
               

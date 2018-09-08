@@ -43,6 +43,6 @@ This function will differ depending on setup.  Running from a virtual machine wi
 
         $ ./node_modules/node-sass/bin/node-sass  public/scss/styles.scss public/css/
 
-        or
+        or watch for changes (make watch command)
 
-        $ make sass 
+        $ ./node_modules/gulp/bin/gulp.js sass:watch

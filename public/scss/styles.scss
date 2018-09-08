@@ -11,18 +11,66 @@ html, body {
     background-color: $light;
     font-family: $ibm-plex;
     overflow-x: hidden; // hide horizontal
-
 }
 
 body {
     margin: 0px;
+    height: auto;
+}
+
+.breadcrumbs {
+    a {
+        display:inline-block;
+        padding:4px;
+        color: $dark;
+    }
+    p {
+        display: inline-block;
+        padding: 4px;
+        color: $dark;
+    }
 }
 
 .page {
     width: 100%;
     max-width: 800px;
-    margin: 64px auto;
+    margin: 16px auto;
+    height: auto;
+    .wrapper {
+        max-width: 800px;
+        width: 100%;
+        height: auto;
+        display:block;
+    }
 }
+
+.top {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.paragraph-wrapper {
+    width: 100%;
+    max-width: 800;
+    position: relative;
+    clear:both
+}
+.paragraph-right {
+    width: 600px;
+    margin: 16px 0px;
+    display: block;
+    right:0;
+    float:right;
+
+}
+
+.paragraph {
+    width: 600px;
+    margin: 32px 0px;
+    display: block;
+}
+
 h1 {
     font-size: 32px;
     font-weight: 200;
@@ -43,6 +91,7 @@ h3 {
 .video {
     margin: auto;
     text-align: center;
+
     video {
         max-width: 800px;
         width: 100%;
@@ -50,35 +99,58 @@ h3 {
     }
 }
 
+img {
+    width: 100%; 
+    display: block;
+    max-width: 800px;
+}
 .header {
     background-color: $grey;
     width: 100%;
-    height: 168px;
+    height: 120px;
+
 
     .wrapper {
         max-width: 1200px;
         margin: auto;
+        height: 100%;
+        padding: 0px 32px;
+
         .logo {
             display: inline-block;
             width: 50%;
+            height: 100%;
+
+            a {
+                text-decoration: none;
+            }
             p {
                 color: $peach;
-                font-size: 64px;
+                font-size: 48px;
                 font-weight: 100;
-                padding: 16px;
-                line-height: 8px;
+                padding: 16px 0px;
+                line-height: 0px;
             }
         }
         .links { 
             display: inline-block;
             width: 50%;
+            text-align:right;
             .about, .contract {
                 width: 50%;
                 display: inline-block;
+                float: right;
                 a {
+                    text-align: right !important;
                     text-decoration: none;
                     color: $light;
                     font-weight: 500;
+                }
+                a:hover {
+                    color: $peach;
+                }                
+                a:active {
+                    color: $maroon;
                 }
             }
             h2 {
@@ -89,22 +161,36 @@ h3 {
     }
     
 }
-
+.button-wrapper {
+    width: 100%;
+    max-width: 800px;
+    display:block;
+    float:left;
+}
 .button {
     background-color: $maroon;
     border-radius: 5px;
     height: 56;
     min-width: 200px;
     max-width: 400px;
-    margin:auto;
+    margin: 32px auto;
 
-    h2 {
+    a {
+        text-decoration: none;
+        h2 {
         color: $light;
         font-size: 24px;
         font-weight: 500;
         line-height: 56px;
         text-align: center;
-    }
+      }
+  }
+}
+
+.two-dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14),
+    0 1px 5px 0 rgba(0, 0, 0, .12),
+    0 3px 1px -2px rgba(0, 0, 0, .2);
 }
 
 .left-bar{
@@ -113,8 +199,11 @@ h3 {
     background-color: $peach;
     display: inline-block;
     position: relative;
-    margin: 16px 0px 0px 0px;
+    margin: 32px 0px 0px 0px;
     height: 50px;
+    h2 {
+        line-height: 16px;
+    }
 
 }
 
@@ -128,15 +217,50 @@ h3 {
     z-index: -0;
 }
 
+.right-bar-wrapper {
+    width: 100%;
+    height: 50px;
+    margin-top: 32px;
+}
+
+.right-bar{
+    max-width: 800px;
+    width: 600px;
+    background-color: $peach;
+    display: block;
+    position: relative;
+    height: 50px;
+    float: right;
+
+    h2 {
+        line-height: 16px;
+        padding-left:16px;
+    }
+
+}
+
+.right-bar:before{
+    content:"";
+    background-color: $peach;
+    position: absolute;
+    height: 50px;;
+    width: 2000px;
+    right: -2000px;
+    z-index: -0;
+}
+
 
 .footer {
-    height:168px;
+    height:180px;
     width: 100%;
     background-color: $grey;
+    clear:both;
+    display: block;
     .wrapper {
         width: 100%;
         max-width: 1200px;
         margin: auto;
+        display: flow-root;
         .left {
             display: inline-block;
             width: 25%;
@@ -151,6 +275,12 @@ h3 {
                         margin: 2px;
         
                     }
+                    a:hover {
+                        color: $peach;
+                    }                
+                    a:active {
+                        color: $maroon;
+                    }
                     p {
                         line-height: 8px;
                         color: $light;
@@ -158,11 +288,14 @@ h3 {
                     }
                 }
             }
-
         }
         .middle {
             display: inline-block;
             width: 50%;
+            vertical-align: text-bottom;
+            h2 {
+                text-align: center;
+            }
             p {
                 color: $light;
                 text-align: center;
@@ -173,14 +306,147 @@ h3 {
             display: inline-block;
             ul {
                 list-style-type: none;
+                padding: 8px 0px; 
                 li {
                     color: $light;
+                    padding: 8px;
                     a {
-
+                        line-height: 8px;
+                        color: $light;
+                        text-decoration: none;
+                        margin: 2px;
+        
+                    }
+                    i {
+                        margin-right: 8px;
+                    }
+                    a:hover {
+                        color: $peach;
+                    }                
+                    a:active {
+                        color: $maroon;
                     }
                 }
             }
         }
 
     }
+}
+
+@media only screen and (max-width: 1200px) {
+    .footer {
+     height: auto;
+      .wrapper {
+          vertical-align: middle;
+          display: flow-root;
+          padding: 0px 16px;
+        .left, .middle, .right {
+            width: 100% !important;
+            display: block;
+            text-align:center;
+            ul {
+                padding: 8px 0px;
+            }
+        }
+      }
+    }
+    .top {
+        margin: 0px 24px;
+    }
+
+    .left-bar{
+        width: 100%;
+        height: 50px;
+        h2 {
+            line-height: 16px;
+            margin-left:24px;
+        }
+    }    
+    .right-bar{
+        width: 100%;
+        height: 50px;
+        h2 {
+            line-height: 16px;
+            margin-right:24px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .paragraph {
+        margin-left: 24px !important;
+    }
+    .paragraph-right {
+        margin-right: 24px !important;
+    }
+    .footer {
+        .wrapper {
+            padding: 0px;
+        }
+    }.header {
+      .wrapper {
+          padding: 0px 8px;
+        .logo {
+            height: auto !important;
+            vertical-align: text-bottom;
+            a { 
+                p {
+                    padding: 0px;
+                }
+            }
+            
+        }
+        .links {
+            .about, .contract {
+                display: block;
+                width: 100%;
+                margin: 8px 0px;
+            }
+        }
+    }
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 600px) {
+    .paragraph {
+        margin: 0px !important;
+        width: auto !important;
+        padding: 0px 12px !important;
+    }
+    .paragraph-right {
+        margin: 0px !important;
+        width: auto !important;
+        padding: 0px 12px !important;
+    }
+    .left-bar {
+      h2 {
+         margin-left: 12px; 
+      }
+    }
+    .header {
+       height: 180px;
+       .wrapper {
+           position: absolute;
+           width: 100%;
+           height: auto;
+           .logo {
+               display:block;
+               width: 100%;
+               a {
+                   text-align: center;
+               }
+           }
+           .links {
+               display: block;
+               width: 100%;
+               .about, .contract {
+                   text-align: center;
+               }
+               a {
+                   text-align: center;
+               }
+           }
+       }
+   }
 }
