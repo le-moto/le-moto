@@ -47,11 +47,15 @@ body {
   display: block;
   right: 0;
   float: right; }
+  .paragraph-right p {
+    line-height: 24px; }
 
 .paragraph {
   width: 600px;
   margin: 32px 0px;
   display: block; }
+  .paragraph p {
+    line-height: 24px; }
 
 h1 {
   font-size: 32px;
@@ -103,8 +107,7 @@ img {
       text-align: right; }
       .header .wrapper .links .about, .header .wrapper .links .contract {
         width: 50%;
-        display: inline-block;
-        float: right; }
+        display: inline-block; }
         .header .wrapper .links .about a, .header .wrapper .links .contract a {
           text-align: right !important;
           text-decoration: none;
@@ -242,9 +245,11 @@ img {
             line-height: 8px;
             color: #EBE8E5;
             text-decoration: none;
-            margin: 2px; }
+            margin: 2px;
+            display: inline; }
           .footer .wrapper .right ul li i {
-            margin-right: 8px; }
+            margin-right: 8px;
+            display: inline; }
           .footer .wrapper .right ul li a:hover {
             color: #C99288; }
           .footer .wrapper .right ul li a:active {
