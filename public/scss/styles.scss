@@ -33,18 +33,25 @@ body {
     }
 }
 
+.center {
+    text-align: center;
+}
 .page {
     width: 100%;
     max-width: 800px;
     margin: 16px auto;
     min-height: 100%;
     height: auto;
+    color: black;
     .wrapper {
         max-width: 800px;
         width: 100%;
         height: auto;
         display:block;
     }
+  a {
+    color: $maroon;
+  }
 }
 
 .top {

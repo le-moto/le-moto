@@ -19,17 +19,23 @@ body {
   padding: 4px;
   color: #2B2D32; }
 
+.center {
+  text-align: center; }
+
 .page {
   width: 100%;
   max-width: 800px;
   margin: 16px auto;
   min-height: 100%;
-  height: auto; }
+  height: auto;
+  color: black; }
   .page .wrapper {
     max-width: 800px;
     width: 100%;
     height: auto;
     display: block; }
+  .page a {
+    color: #74484E; }
 
 .top {
   width: 100%;
